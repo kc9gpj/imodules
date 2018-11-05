@@ -1,0 +1,119 @@
+body{
+    background: lightgray;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    width: 1170px;
+    height: 350px;
+    margin: auto;
+    background-color: white;
+    
+  }
+/* hover for logo */
+#logo:hover{
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+/* hover animation for buttons */
+button:hover{
+
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+.topnav{
+    background-color: #FEFEFE;
+    overflow: hidden;
+    height: 121px;
+    width: 1170px;
+    margin: auto;
+    padding: 20px 0px 30px 0px;
+    color: #021D5C;
+    font-family: 'Karla', sans-serif;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    border-top: solid;
+    border-color: #2482BB;
+
+}
+#navRight{
+    
+}
+#banner{
+width: 1170px;
+height: 350px;
+}
+
+#main{
+    margin: auto;
+    width: 1170px;
+    height: 975px;
+    background-color: white;
+}
+
+#navbarBottom{
+    width: 1170px;
+    height: 225px;
+}
+#sidebar{
+    color: #2581B8;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+h3{
+    color: #2581B8;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#picOne{
+    grid-column: 1 / 2;
+}
+#picOne:hover{
+    opacity: 0.3;
+    filter: alpha(opacity=30);  
+}
+#picTwo{
+    grid-column: 3 / 4;
+}
+#picTwo:hover{
+    opacity: 0.3;
+    filter: alpha(opacity=30);  
+}
+#picThree{
+    grid-column: 5 / 6; 
+}
+#picThree:hover{
+    opacity: 0.3;
+    filter: alpha(opacity=30);  
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
