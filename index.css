@@ -150,7 +150,7 @@ height: 350px;
     height: 165px;
     width: 1440px;
     margin: auto;
-    position: relative;
+    position: fixed;
     left: 0;
     right: 0;
     border-bottom: solid;
@@ -175,11 +175,172 @@ height: 350px;
  }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 768px) {
-    .column.side, .column.middle {
-        width: 100%;
+@media(max-width: 768px) {
+    body{
+        background: lightgray;
     }
-    #bannerImg{
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        width: 1440px;
+        height: 350px;
+        margin: auto;
+        background-color: white;
+        /* padding: 25px 25px 25px 25px; */
+      }
+      .pic-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        height: 350px;
+        margin: auto;
+        background-color: white;
+        padding: 0px 115px 25px 135px;
+        width: 100%;
+        display: block;
+      }
+      .banner-container {
+        width: 1440px;
+        height: 350px;
+        margin: auto;
+        background-color: white;
+      }
+    /* hover for logo */
+    #logo:hover{
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+    }
+    /* hover animation for buttons */
+    button:hover{
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+    }
+    .topnav{
+        background-color: #FEFEFE;
+        overflow: hidden;
+        height: 110px;
+        width: 1440px;
+        margin: auto;
+        padding: 20px 0px 30px 0px;
+        color: #021D5C;
+        font-family: 'Karla', sans-serif;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        border-top: solid;
+        border-color: #2482BB;
+        border-width: 10px;
+    
+    }
+    #navRight{
+        
+    }
+    #banner{
         width: 768px;
     }
+    
+    #main{
+        margin: auto;
+        width: 748px;
+        height: 600px;
+        background-color: white;
+        padding: 25px 10px 0px 10px;
+    }
+    .middleText{
+        font-size: 18px;
+    }
+    .middleTextMain{
+        font-size: 45px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: bold;
+    }
+    .middleTextSecondary{
+        color: #2581B8;
+        font-size: 30px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    #navbarBottom{
+        width: 1440px;
+        height: 225px;
+    }
+    #sidebar{
+        padding: 0px 0px 0px 0px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .sideText{
+        font-family: 'Montserrat', sans-serif;
+        color: #2581B8;
+        padding: 10px 0px 0px 10px;
+        line-height: 40px;
+    }
+    
+    
+    /* Create three unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 0px;
+    }
+    
+    /* Left and right column */
+    .column.side, .column.middle {
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    #picOne{
+        grid-column: 1 / 2;
+    }
+    #picOne:hover{
+        opacity: 0.3;
+        filter: alpha(opacity=30);  
+    }
+    #picTwo{
+        grid-column: 3 / 4;
+    }
+    #picTwo:hover{
+        opacity: 0.3;
+        filter: alpha(opacity=30);  
+    }
+    #picThree{
+        grid-column: 5 / 6; 
+    }
+    #picThree:hover{
+        opacity: 0.3;
+        filter: alpha(opacity=30);  
+    }
+    #navbarBottom {
+        background-color: #373834;
+        bottom: 0;
+        height: 165px;
+        width: 1440px;
+        margin: auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+        border-bottom: solid;
+        border-color: #272727;
+        border-width: 60px;
+        font-family: 'Montserrat', sans-serif;
+     }
+     .bottomText {
+        position: relative;
+        top: 45px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        color: white;
+        font-style: italic;
+        font-family: 'Montserrat', sans-serif;
+    
+     }   
 }
