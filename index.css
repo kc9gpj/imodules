@@ -127,14 +127,18 @@ h3{
     opacity: 0.3;
     filter: alpha(opacity=30);  
 }
-#navbarbottom {
+.navbarbottom {
     background-color: #373834;
-    overflow: hidden;
+    color: white;
     bottom: 0;
+    height: 165px;
     width: 1440px;
-    height: 170px;
-    text-align: right;
-}
+    margin: auto;
+    position: relative;
+    z-index: 5;
+    left: 0;
+    right: 0;
+ }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
