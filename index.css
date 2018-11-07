@@ -28,6 +28,10 @@ body{
     background-color: white;
   }
 /* hover for logo */
+#logo{
+position: relative;
+padding: 30px 300px 0px 100px;
+}
 #logo:hover{
     opacity: 0.3;
     filter: alpha(opacity=30);
@@ -48,14 +52,14 @@ button:hover{
     border-color: #2482BB;
     border-width: 10px;
     font-family: 'Karla', sans-serif;
-    overflow: hidden;
+  
 }
 #nav li {
     float: left; 
 }
 #nav li a {
 	display: block;
-	padding: 8px 15px;
+	padding: 55px 15px;
 	text-decoration: none;
 	font-weight: bold;
 	color: gray;
@@ -64,7 +68,52 @@ button:hover{
 #nav li a:hover {
 	color: #7eba56;
     background-color: #fff; 
+    border-top: solid;
+    border-color: #7eba56;
+    border-width: 10px;
+
 }
+.dropdown {
+    float: left; 
+    position: relative;
+    display: inline-block;
+    display: block;
+	padding: 55px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: gray;
+    font-size: 20px;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;
+ z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+	color: #7eba56;
+    background-color: #fff; 
+    border-bottom: solid;
+    border-color: #7eba56;
+    border-width: 10px;
+    z-index: 999;
+}
+
 #banner{
 width: 1440px;
 height: 350px;
@@ -153,7 +202,7 @@ height: 350px;
  #bottomNav {
     background-color: #373834;
     height: 165px;
-    width: 1440px;
+    width: 1400px;
 	margin: auto;
     bottom: 0;
 	list-style: none;
@@ -162,11 +211,11 @@ height: 350px;
     border-color: #272727;
     border-width: 60px;
     font-family: 'Karla', sans-serif;
-    overflow: hidden;
     color: white;
 }
 #bottomNav li {
     float: left; 
+    padding: 40px 0px 0px 0px
 }
 #bottomNav li a {
 	display: block;
@@ -174,8 +223,9 @@ height: 350px;
 	text-decoration: none;
 	font-weight: bold;
 	color: gray;
-    font-size: 20px;
+    font-size: 17px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 #bttomNav li a:hover {
 	color: #7eba56;
@@ -183,7 +233,7 @@ height: 350px;
 }
  .bottomText {
     position: relative;
-    top: 55px;
+    top: 65px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -199,6 +249,8 @@ height: 350px;
      height: 60px;
      width: 260px;
      font-size: 20px;
+     margin: 0px 0px 0px 100px;
+     font-family: 'Montserrat', sans-serif;
  }
  ul{
     list-style-type: none;
@@ -252,14 +304,10 @@ height: 350px;
         font-family: 'Karla', sans-serif;
         left: 0;
         right: 0;
-        z-index: 3;
         border-top: solid;
         border-color: #2482BB;
         border-width: 10px;
     
-    }
-    #navRight{
-        
     }
     #banner{
         width: 768px;
