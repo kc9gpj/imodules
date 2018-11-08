@@ -1,7 +1,8 @@
 body{
-    background: lightgray;
+    background-color: lightgray;
 }
-  .pic-container {
+/* three picture container */
+.pic-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
@@ -11,13 +12,14 @@ body{
     background-color: white;
     padding: 0px 115px 25px 135px;
   }
+  /* top banenr container */
   .banner-container {
     width: 1440px;
     height: 350px;
     margin: auto;
     background-color: white;
   }
-/* hover for logo */
+  /* top logo */
 #logo{
 position: relative;
 padding: 30px 300px 0px 100px;
@@ -31,6 +33,7 @@ button:hover{
     opacity: 0.3;
     filter: alpha(opacity=30);
 }
+/* top nav */
 #nav {
 	height: 110px;
     width: 1440px;
@@ -42,10 +45,9 @@ button:hover{
     border-color: #2482BB;
     border-width: 10px;
     font-family: 'Karla', sans-serif;
-  
 }
 #nav li {
-    float: left; 
+    float: left;
 }
 #nav li a {
 	display: block;
@@ -57,14 +59,15 @@ button:hover{
 }
 #nav li a:hover {
 	color: #7eba56;
-    background-color: black; 
+    background-color: black;
     border-top: solid;
     border-color: #7eba56;
     border-width: 10px;
 
 }
+/* top nav dropdown */
 .dropdown {
-    float: left; 
+    float: left;
     position: relative;
     display: inline-block;
     display: block;
@@ -73,6 +76,9 @@ button:hover{
 	font-weight: bold;
 	color: gray;
     font-size: 20px;
+}
+.mobileDropdown{
+    display: none;
 }
 .dropdown:hover{
     color: #7eba56;
@@ -101,15 +107,16 @@ button:hover{
     border-width: 10px;
     background-color: gray;
     opacity: 0.9;
-    filter: alpha(opacity=10);  
+    filter: alpha(opacity=10);
     z-index: 10;
     font-family: 'Karla', sans-serif;
 }
-
+/* top banner image */
 #banner{
 width: 1440px;
 height: 350px;
 }
+/* main middle text */
 #main{
     margin: auto;
     width: 1190px;
@@ -130,15 +137,12 @@ height: 350px;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
 }
-
-#navbarBottom{
-    width: 1440px;
-    height: 225px;
-}
+/* side menu */
 #sidebar{
     padding: 20px 0px 0px 0px;
     font-family: 'Montserrat', sans-serif;
 }
+/* side menu */
 .sideText{
     font-family: 'Montserrat', sans-serif;
     color: #2581B8;
@@ -150,47 +154,47 @@ height: 350px;
     float: left;
     padding: 10px;
 }
-
+/* hide mobile column */
+.columnSideMobile{
+    display: none;
+}
 /* Left and right column */
 .column.side {
     width: 25%;
 }
-
 /* Middle column */
 .column.middle {
     width: 60%;
     margin: 0px 0px 0px 40px;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 #picOne{
     grid-column: 1 / 2;
 }
 #picOne:hover{
     opacity: 0.3;
-    filter: alpha(opacity=30);  
+    filter: alpha(opacity=30);
 }
 #picTwo{
     grid-column: 3 / 4;
 }
 #picTwo:hover{
     opacity: 0.3;
-    filter: alpha(opacity=30);  
+    filter: alpha(opacity=30);
 }
 #picThree{
-    grid-column: 5 / 6; 
+    grid-column: 5 / 6;
 }
 #picThree:hover{
     opacity: 0.3;
-    filter: alpha(opacity=30);  
+    filter: alpha(opacity=30);
 }
-
+/* bottom nav bar */
  #bottomNav {
     background-color: #373834;
     height: 165px;
@@ -206,12 +210,12 @@ height: 350px;
     color: white;
 }
 #bottomNav li {
-    float: left; 
+    float: left;
     padding: 40px 0px 0px 0px
 }
 #bottomNav li a {
 	display: block;
-	padding: 8px 15px;
+	padding: 8px 0px 0px 65px;
 	text-decoration: none;
 	font-weight: bold;
 	color: gray;
@@ -221,11 +225,11 @@ height: 350px;
 }
 #bttomNav li a:hover {
 	color: #7eba56;
-    background-color: #fff; 
+    background-color: #fff;
 }
  .bottomText {
     position: relative;
-    top: 65px;
+    top: 75px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -236,7 +240,7 @@ height: 350px;
 
  }
  #donateButton{
-     background-color: #7eba56; 
+     background-color: #7eba56;
      color: white;
      height: 60px;
      width: 260px;
@@ -248,12 +252,14 @@ height: 350px;
     list-style-type: none;
  }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout for 768px */
 @media(max-width: 768px) {
+    /* top logo */
     #logo{
         position: relative;
-        padding: 30px 400px 0px 0px;   
+        padding: 30px 400px 0px 0px;
     }
+    /* three picture container */
       .pic-container {
         display: inline-block;
         margin: auto;
@@ -261,62 +267,30 @@ height: 350px;
         width: 728px;
         padding: 0px 0px 60px 40px;
       }
+      /* top banner container */
       .banner-container {
         width: 768px;
         height: 180px;
       }
+      /* top nav */
     #nav {
         height: 125px;
-        width: 768px;  
+        width: 768px;
     }
     #nav li a {
-        display: block;
-        padding: 55px 15px;
-        text-decoration: none;
-        font-weight: bold;
-        color: gray;
         font-size: 20px;
     }
-    #nav li a:hover {
-        color: #7eba56;
-        background-color: #fff; 
-        border-top: solid;
-        border-color: #7eba56;
-        border-width: 10px;
-    }
+    /* dropdown menu */
     .dropdown {
         margin: 0px 0px 0px 35px;
-        padding: 55px 15px;  
+        padding: 55px 15px;
     }
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-    .dropdown-content a:hover {background-color: #ddd;
-        z-index: 999;
-    }
-    .dropdown:hover .dropdown-content {
-        display: block;
-        color: #7eba56;
-        background-color: #fff; 
-        border-top: solid;
-        border-color: #7eba56;
-        border-width: 10px;
-        z-index: 999;
-    }
+    /* top banner img */
     #banner{
         width: 768px;
         height: 180px;
     }
+    /* main text */
     #main{
         width: 768px;
         height: 530px;
@@ -327,24 +301,20 @@ height: 350px;
     }
     .middleTextMain{
         padding: 20px 0px 0px 0px;
-        font-size: 25px;
+        font-size: 35px;
     }
     .middleTextSecondary{
-        font-size: 20px;  
+        font-size: 25px;
     }
-    #navbarBottom{
-        width: 768px;
-        height: 275px;
-    }
+    /* side menu */
     #sidebar{
         padding: 40px 0px 0px 0px;
-        font-family: 'Montserrat', sans-serif;
     }
     .sideText{
         padding: 0px 0px 0px 0px;
-        line-height: 20px;
+        line-height: 30px;
         font-size: 16px;
-    }       
+    }
     #picOne{
         margin: 5px;
         width: 215px;
@@ -360,9 +330,10 @@ height: 350px;
         width: 215px;
         height: 190px;
     }
+    /* bottom nav bar */
     #bottomNav {
         height: 165px;
-        width: 730px;
+        width: 725px;
     }
     #bottomNav li a {
         font-size: 14px;
@@ -386,5 +357,166 @@ height: 350px;
     position: relative;
     width: 150px;
     left: 150px;
+    }
+}
+/* Responsive layout for 320px */
+@media(max-width: 320px) {
+    /* top logo */
+    #logo{
+        position: relative;
+        padding: 0px 0px 0px 0px;
+        width: 200px;
+        top: 20px;
+    }
+    /* three pic container */
+      .pic-container {
+        display: inline-block;
+        margin: auto;
+        height: 880px;
+        width: 320px;
+        padding: 0px 0px 0px 0px;
+      }
+      /* top banner container */
+      .banner-container {
+        width: 320px;
+        height: 80px;
+      }
+      /* top nav bar */
+    #nav {
+        height: 80px;
+        width: 320px;
+    }
+    #nav li a {
+        font-size: 20px;
+    }
+    /* dropdown menu */
+    .dropdown {
+        display: none;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px;
+    }
+    /* mobile dropdown */
+    .mobileDropdown{
+        display: block;
+        position: relative;
+        font-size: 20px;
+        top: 30px;
+        left: 50px;
+    }
+    .dropdown:hover{
+        color: #7eba56;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 260px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .mobileDropdown:hover .dropdown-content {
+        display: block;
+        color: #7eba56;
+        border-top: solid;
+        border-color: #7eba56;
+        border-width: 10px;
+        background-color: gray;
+        opacity: 0.9;
+        filter: alpha(opacity=10);
+        z-index: 10;
+        font-family: 'Karla', sans-serif;
+    }
+    /* top banner img */
+    #banner{
+        width: 320px;
+        height: 80px;
+    }
+    /* main text */
+    #main{
+        width: 320px;
+        height: 1100px;
+        padding: 0px 0px 0px 0px;
+    }
+    .column.side{
+        display: none;
+    }
+    .columnSideMobile{
+        display: block;
+        background-color: #f2f2f2;
+        padding: 5px 30px 5px 0px;
+    }
+    .middleText{
+        font-size: 16px;
+    }
+    .middleTextMain{
+        padding: 0px 0px 0px 0px;
+        font-size: 22px;
+    }
+    .middleTextSecondary{
+        font-size: 18px;
+    }
+    #navbarBottom{
+        width: 320px;
+        height: 275px;
+    }
+    #sidebar{
+        padding: 40px 0px 0px 0px;
+    }
+    .sideText{
+        padding: 0px 0px px 0px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    #picOne{
+        margin: 0px 0px 5px 15px;
+        width: 290px;
+        height: 260px;
+    }
+    #picTwo{
+        margin: 0px 0px 5px 15px;
+        width: 290px;
+        height: 260px;
+    }
+    #picThree{
+        margin: 0px 0px 0px 15px;
+        width: 290px;
+        height: 260px;
+    }
+    /* bottom navbar */
+    #bottomNav {
+        height: 280px;
+        width: 280px;
+    }
+    #bottomNav li a {
+        position: relative;
+        font-size: 14px;
+        margin: 0px 0px 0px 0px;
+        right: 20px;
+        display: block;
+        padding: 8px 5px;
+    }
+    .bottomText {
+        position: relative;
+        right: 20px;
+        bottom: 40px;
+        font-size: 12px;
+    }
+    #donateButton{
+        position: relative;
+        right: 85px;
+        bottom: 80px;
+        height: 40px;
+        width: 220px;
+        font-size: 14px;
+    }
+    #bottomLogo{
+    position: relative;
+    width: 200px;
+    left: 20px;
     }
 }
